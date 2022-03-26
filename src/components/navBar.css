@@ -1,0 +1,40 @@
+.navBar{
+    background-color: rgb(252, 76, 105);
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(252, 76, 105);
+  }
+  
+  .topnav a {
+  
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .topnav a:hover {
+    background-color: rgb(255, 173, 186);
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: rgb(255, 173, 186);
+    color: black;
+    font-weight: bold;
+  }
+
+  .navbar{
+    background-color: rgb(182, 30, 3);
+    color: black;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .navbar-expand-lg{
+    color: black;
+  }
