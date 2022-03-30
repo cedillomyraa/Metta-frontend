@@ -7,6 +7,8 @@ const Admin = () => {
     //state variable to save info
     const [prod, setProd] = useState({});
     const [coupon, setCoupon] = useState({});
+    const [allCoupons, setAllCoupons]= useState([]);
+    const [allProds,setAllProds]= useState([]);
 
     const handleInputChange = (e)=> {
         //pattern to follow if an object or array
@@ -25,13 +27,23 @@ const Admin = () => {
 
         let service = new DataService();
         service.saveProduct(prod);
+
+        let copy = [...allProds];
+        copy.push(prod);
+        setAllProds(copy);
     };
 
     const saveCoupon = ()=>{
         console.log(coupon);
         let service = new DataService();
         service.saveCoupon(coupon);
-    }
+
+        let copy= [...allCoupons];
+        copy.push(coupon);
+        setAllCoupons(copy);
+    };
+
+    
 
     return(
         <div className='admin'>
@@ -63,6 +75,14 @@ const Admin = () => {
                         <button onClick={saveProduct} className='btn-save-item'>Save</button>
                     </div>
                 </div>
+
+                <div className='new-item'>
+                    {allProds.map((prod, index) => (
+                        <div key={index}>
+                            <label>{prod.title}</label>-<label>{prod.price}</label>
+                        </div>
+                    ))}
+                </div>
             </section>
         
             <section>
@@ -81,6 +101,13 @@ const Admin = () => {
                     <button onClick={saveCoupon} className='btn-save-coupon'>Save</button>
                 </div>
 
+                <div className='coupon-list'>
+                    {allCoupons.map((coupon, index) => (
+                        <div key={index}>
+                            <label>{coupon.code}</label>-<label>{coupon.discount}</label>
+                        </div>
+                    ))}
+                </div>
             </section>
         </div>
     );

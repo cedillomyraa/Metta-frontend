@@ -1,3 +1,7 @@
+.home-page{
+   
+}
+
 .home-page .banner img{
     width: 100%;
     height: 600%;
@@ -12,21 +16,25 @@
 }
 
 .home-page .store-name-text h1{
-    padding-left: 39%;
+    padding-left: 29%;
     font-size: 120px;
     font-family: papyrus;
-    color: rgb(182, 30, 3);
+    color: rgb(202, 150, 5);
 }
 
 .home-page .store-name-text h4{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding-left: 45%;
+    font-family: papyrus;
+    padding-left: 25%;
     margin-top: 3%;
-    color: rgb(182, 30, 3);
+    color: rgb(202, 150, 5);
+    font-weight: bolder;
+    letter-spacing: 3px;
 }
 .promo-img{
     display: flex;
     margin: auto; 
+    margin: block;
+    margin-left: 80px;
     align-items: center;
 }
 
@@ -35,14 +43,32 @@
     left: 50%;
     margin: auto;
     display: flex;
+    width: 70%;
   
 }
 
-.promo-img .link-btn{
-    display: flex;
-    margin: 10px 10px 20px 10px;
-    align-items: center;
-    font-family: fantasy;
+.promo-img .link-btn .btn-info{
+    display: block;
+    font-family: cambri;
     text-decoration: none;
-    background-color: none;
+    background:rgb(202, 150, 5) ;
+    padding: 12px 25px 15px 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: absolute;
+    width: 30%;
+    top: 856px;
+    left: 49%;
+    transform: translate(-160%, -30%);
+    text-align: center;
+    
+}
+
+.coupon-img{
+    width: 30%;
+    height: 200%;
+    padding-left: 0%;
+
+    
+    
 }

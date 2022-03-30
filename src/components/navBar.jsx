@@ -1,9 +1,12 @@
 import'./navBar.css';
 import {Link} from "react-router-dom";
+import store from '../context/storeContext';
+import { useContext } from 'react';
 
 
 
 const NavBar = () => {
+  const cart = useContext(store).cart;
      return(
     //<div className='navBar'>
 //     <h2>This is the Nav Bar</h2>
@@ -27,17 +30,14 @@ const NavBar = () => {
           <Link className="nav-link" to="/about">About Us</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/cart">Cart</Link>
+          <Link className="nav-link" to="/admin">Admin</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/admin">Admin</Link>
+          <Link className="nav-link" to="/cart">Cart</Link>
         </li>
         
       </ul>
-      <form className="d-flex">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <form className="d-flex">{cart.length}</form>
     </div>
   </div>
 </nav>

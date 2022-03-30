@@ -1,17 +1,20 @@
 .product{
-    border: 1px solid rgb(255, 173, 186);
+    border: 1px solid black;
     display: inline-block;
-    margin: 5px;
-    padding: 5px;
+    margin: 5px 5px 25px 5px;
+    padding: 5px, 5px, 5px, 5px;
     color: black;
     border-radius: 5px;
-    box-shadow: 5px 5px rgb(255, 173, 186);
-    background-color:hsl(27, 53%, 49%, 0.3) ;
+    box-shadow: 5px 5px rgb(202, 150, 5);
+    background-color:rgba(160, 158, 155, 0.3) ;
+    font-family: cambri;
+    letter-spacing: 1px;
    
 }
 
 .product .price, .product .total{
     display: block;
+    font-size: 18px;
 }
 .product #add{
     margin-top: 5px;
