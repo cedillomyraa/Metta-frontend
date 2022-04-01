@@ -7,6 +7,16 @@ import { useContext } from 'react';
 
 const NavBar = () => {
   const cart = useContext(store).cart;
+
+  const getNumber = ( ) => {
+    let total = 0;  //sum all the quantity (s) in the array
+    for (let i=0; i < cart.length; i++){
+      let prod = cart[i];
+      total += prod.quantity;
+    }
+    return total;  // and return the total
+    
+  }
      return(
     //<div className='navBar'>
 //     <h2>This is the Nav Bar</h2>
@@ -37,7 +47,11 @@ const NavBar = () => {
         </li>
         
       </ul>
-      <form className="d-flex">{cart.length}</form>
+      <form className="d-flex">
+        <Link to = "/cart" className='btn btn-outline-light'>
+          <span className='badge bg-primary'> {getNumber()} </span> My Cart
+        </Link>
+        </form>
     </div>
   </div>
 </nav>

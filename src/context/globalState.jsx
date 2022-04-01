@@ -10,7 +10,19 @@ const GlobalState =(props) =>{
         const addProdToCart = (prod) => {
             console.log("adding prod to state");
             let copy= [...cart];
-            copy.push(prod);
+            let found = false;
+            console.log(prod);
+            for(let i=0; i< copy.length; i++){
+                let prodInCart = copy [i];
+                if(prodInCart._id ===prod._id){
+                    prodInCart.quantity = prodInCart.quantity + prod.quantity;
+                    found = true
+                }
+            }
+            if (!found){
+                copy.push(prod);
+            }
+
             setCart(copy);
         };
         const removeProdFromCart= () => {
@@ -18,11 +30,12 @@ const GlobalState =(props) =>{
         };
     return (
         //wrapper component
-        <store.Provider value={{
-            cart:cart,
-            user: loggedInUser,
-            addProdToCart: addProdToCart,
-            removeProdFromCart: removeProdFromCart,
+        <store.Provider 
+            value={{
+                cart:cart,
+                user: loggedInUser,
+                addProdToCart: addProdToCart,
+                removeProdFromCart: removeProdFromCart,
         }}>
             {props.children}
         </store.Provider>

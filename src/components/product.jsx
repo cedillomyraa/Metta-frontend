@@ -12,6 +12,7 @@ const addProdToCart = useContext(store) .addProdToCart;
 
 const onQuantityChange = (value) =>{
         console.log("Quantity Change!", value);
+        setQuantity(value);
         };
 const addProduct = ()=> {
             //add prod to context(state)
@@ -22,7 +23,7 @@ const addProduct = ()=> {
 
 return(<div className='product'>
         <h2>{props.title} </h2>
-        <img src={"/image/"+props.data.image} alt="product img" />
+        <img src={"/image/"+props.data.image} alt="product img" ></img>
         <h3 className='price'> $ {props.data.price}  </h3>
         <h3 className='total'> $ {props.data.total}  </h3>
         <p className='color'> Color: {props.data.color}  </p>

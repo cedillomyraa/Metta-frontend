@@ -15,7 +15,7 @@ var catalog = [
         color: "Green",
         stock: 10,
         category:"Kimono",
-        image:"Kimono-2-1.jpg",
+        image:"Kimono-2-2.jpg",
     },
     {
         _id: "77773",

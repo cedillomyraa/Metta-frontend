@@ -17,7 +17,7 @@ const QuantityPicker = (props) => {
 
     const handleIncrease = ()=> {
         let value = quantity+1;
-        setQuantity(value+1);
+        setQuantity(value);
         props.onChange(value);   
     }
 
