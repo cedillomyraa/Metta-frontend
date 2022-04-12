@@ -6,17 +6,17 @@ import {useEffect, useState} from 'react';
 const Catalog = () => {
 
     let [products, setProducts] = useState([]);
-
-    const loadCatalog = () =>{
+    //async is where the function starts 
+    const loadCatalog = async() =>{
         console.log("Data retrieved");
         let service = new DataService();
-        let data = service.getCatalog();
+        let data = await service.getCatalog();
         setProducts(data);
     };
 
      useEffect( () => {
         loadCatalog();
-     });
+     },[]);
 
     return(<div className='catalog'>
             <h2>Our catalog, a quick look at whats NEW for the season</h2>
